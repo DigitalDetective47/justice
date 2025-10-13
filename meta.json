@@ -1,0 +1,16 @@
+{
+    "id": "NumberFormat",
+    "name": "Justice",
+    "author": [
+        "DigitalDetective47"
+    ],
+    "description": "Customize how numbers appear.",
+    "prefix": "printf",
+    "main_file": "main.lua",
+    "dependencies": [
+        "Steamodded"
+    ],
+    "conflicts": [
+        "Talisman"
+    ]
+}
