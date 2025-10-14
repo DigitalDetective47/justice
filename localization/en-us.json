@@ -1,0 +1,19 @@
+{
+    "misc": {
+        "printf_UI": {
+            "switchPoint": "Use scientific notation beyond 10^",
+            "decimalPoint": "Decimal separator ",
+            "h_standard": "Standard Notation",
+            "thousandsSeparator": "Thousands separator ",
+            "h_scientific": "Scientific Notation",
+            "digits": "Significant figures ",
+            "infName": "Text on overflow "
+        },
+        "printf_notationTypes": [
+            "Scientific",
+            "Engineering",
+            "Short Scale",
+            "Long Scale"
+        ]
+    }
+}

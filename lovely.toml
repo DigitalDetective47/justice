@@ -1,0 +1,13 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+# allow text inputs to have starting text
+[[patches]]
+[patches.pattern]
+target = "functions/UI_definitions.lua"
+pattern = "args.current_prompt_text = ''"
+position = "at"
+payload = "args.current_prompt_text = args.current_prompt_text or ''"
+match_indent = true
