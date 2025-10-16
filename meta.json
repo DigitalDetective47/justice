@@ -7,7 +7,7 @@
     "description": "Customize how numbers appear.",
     "prefix": "printf",
     "main_file": "main.lua",
-    "version": "1.0.0",
+    "version": "1.0.1~0j16a",
     "dependencies": [
         "Steamodded"
     ],

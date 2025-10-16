@@ -53,13 +53,17 @@ end
 ---@return string
 local function standardFormatter(num)
     ---@type string[]
-    local partitions = splitString((math.floor(num) == num and "%d" or "%f"):format(num), ".")
+    local partitions = splitString(("%f"):format(num), ".")
     ---@type string[]
     local digitGroups = {}
     for match in partitions[1]:reverse():gmatch("%d%d?%d?") do
         table.insert(digitGroups, match)
     end
     partitions[1] = joinStrings(digitGroups, SMODS.Mods.NumberFormat.config.standard.thousandsSeparator):reverse()
+    partitions[2] = partitions[2]:gsub("0*$", "")
+    if partitions[2] == "" then
+        partitions[2] = nil
+    end
     return joinStrings(partitions, SMODS.Mods.NumberFormat.config.decimalPoint)
 end
 
