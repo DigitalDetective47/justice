@@ -1,6 +1,11 @@
 ---@param args {to_key: integer}
 function G.FUNCS.printf_notationTypes(args)
-    SMODS.Mods.NumberFormat.config.notationType = args.to_key
+    SMODS.Mods.NumberFormat.config.scientific.notationType = args.to_key
+end
+
+---@param slider table
+function G.FUNCS.printf_sliderFloor(slider)
+    slider.ref_table[slider.ref_value] = math.floor(slider.ref_table[slider.ref_value] + 0.5)
 end
 
 function SMODS.current_mod.config_tab()
@@ -23,6 +28,7 @@ function SMODS.current_mod.config_tab()
                             ref_value = "switchPoint",
                             w = 4,
                             h = 0.4,
+                            callback = "printf_sliderFloor",
                         })
                     }
                 },
@@ -77,6 +83,7 @@ function SMODS.current_mod.config_tab()
                             ref_value = "digits",
                             w = 4,
                             h = 0.4,
+                            callback = "printf_sliderFloor",
                         })
                     }
                 },
