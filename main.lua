@@ -207,3 +207,11 @@ function number_format(num)
         return scientificFormatters[SMODS.Mods.NumberFormat.config.scientific.notationType](num)
     end
 end
+
+---@param scale number?
+---@param amt number
+---@return number
+function score_number_scale(scale, amt)
+    scale = scale or 1
+    return math.min(20 / (number_format(amt):len() * 4 + 4), 0.75) * scale
+end
