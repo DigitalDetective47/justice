@@ -22,7 +22,7 @@ function SMODS.current_mod.config_tab()
                     nodes = {
                         { n = G.UIT.T, config = { text = localize("switchPoint", "printf_UI"), scale = 0.2, colour = G.C.UI.TEXT_LIGHT } },
                         create_slider({
-                            min = 0,
+                            min = -1,
                             max = 20,
                             ref_table = SMODS.Mods.NumberFormat.config,
                             ref_value = "switchPoint",
