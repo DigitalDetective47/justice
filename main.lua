@@ -205,10 +205,11 @@ function number_format(num)
         return "-" .. SMODS.Mods.NumberFormat.config.infinityName
     elseif num ~= num then
         return "NaN"
-    elseif num == 0 or math.abs(math.log10(num)) < SMODS.Mods.NumberFormat.config.switchPoint then
-        return standardFormatter(num)
+    elseif num == 0 or math.abs(math.log10(math.abs(num))) < SMODS.Mods.NumberFormat.config.switchPoint then
+        return num < 0 and "-" .. standardFormatter(-num) or standardFormatter(num)
     else
-        return scientificFormatters[SMODS.Mods.NumberFormat.config.scientific.notationType](num)
+        return num < 0 and "-" .. scientificFormatters[SMODS.Mods.NumberFormat.config.scientific.notationType](-num)
+            or scientificFormatters[SMODS.Mods.NumberFormat.config.scientific.notationType](num)
     end
 end
 
