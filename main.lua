@@ -197,7 +197,6 @@ local scientificFormatters = {
 ---@return string
 function number_format(num)
     if type(num) ~= "number" then
-        sendErrorMessage("tried to call number_format on a value of type " .. type(num))
         return tostring(num)
     elseif num == math.huge then
         return SMODS.Mods.NumberFormat.config.infinityName
