@@ -199,9 +199,9 @@ function number_format(num)
     if type(num) ~= "number" then
         return tostring(num)
     elseif num == math.huge then
-        return SMODS.Mods.NumberFormat.config.infinityName
+        return SMODS.Mods.NumberFormat.config.infName
     elseif num == -math.huge then
-        return "-" .. SMODS.Mods.NumberFormat.config.infinityName
+        return "-" .. SMODS.Mods.NumberFormat.config.infName
     elseif num ~= num then
         return "NaN"
     elseif num == 0 or math.abs(math.log10(math.abs(num))) < SMODS.Mods.NumberFormat.config.switchPoint then
