@@ -7,9 +7,10 @@
     "description": "Customize how numbers appear.",
     "prefix": "printf",
     "main_file": "main.lua",
-    "version": "1.0.4",
+    "icon_path": "icon.png",
+    "version": "1.0.5",
     "dependencies": [
-        "Steamodded (>=1.0.0~BETA-0814a)"
+        "Steamodded (>=1.0.0~BETA-1530d)"
     ],
     "conflicts": [
         "Talisman"
